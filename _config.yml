@@ -13,20 +13,20 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-lang: en-US
+# lang: en-US
 title: KooKatchu
-email:
-description:
+# email:
+# description:
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: "https://kookatchu.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author: "Cat"
   name: "Cat"
-  twitter:
-  picture:
+#   twitter:
+#   picture:
 twitter_username: "KooKatchu"
-github_username:
-logo: # path of site logo, e.g. "/assets/images/logo.png"
-search: # true, false (default)
+github_username: "KooKatchu"
+# logo: # path of site logo, e.g. "/assets/images/logo.png"
+# search: # true, false (default)
 search_full_content: false # true, false (default)
 search_provider: # lunr (default), algolia
 #algolia:
