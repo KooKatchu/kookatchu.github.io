@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDW: One Pager</title>
+    <style>
+        /* Add CSS styles for navigation and sections */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav li {
+            margin: 0 10px;
+            position: relative;
+            width: max-content;
+            padding: 15px 10px;
+            flex: auto;
+        }
+
+        nav li:hover {
+            background-color: teal;
+            color: black;
+        }
+
+        li#nav-stay:hover {
+            background-color: purple;
+        }
+
+        li#nav-play:hover {
+            background-color: orangered;
+        }
+
+        li#nav-eat:hover {
+            background-color:darkgoldenrod;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a.externalLink::after {
+            content: " 🔗";
+            font-size: 0.8em;
+        }
+
+        /* Hide nested ul by default */
+        nav ul ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            left: 0;
+            top: 100%;
+        }
+
+        /* Show nested ul on hover of parent li */
+        nav li:hover > ul {
+            display: block;
+            width: -webkit-fill-available;
+        }
+
+        /* Style for nested links */
+        nav ul ul li {
+            margin: 0;
+            display: block;
+            border: 1px solid green;
+            width: auto;
+            text-align: left;
+        }
+
+        #nav-resorts:hover {
+            background-color: pink;
+        }
+
+        #nav-parks:hover {
+            background-color: darkmagenta;
+        }
+
+        #nav-dining:hover {
+            background-color: darkorange;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        section {
+            padding: 20px;
+            flex: 1 1 17em;
+        }
+
+
+
+        /* Add additional styles for each section */
+        #home {
+            background-color: #f0f0f0;
+        }
+
+        #about {
+            background-color: #e0e0e0;
+        }
+
+        #contact {
+            background-color: #d0d0d0;
+        }
+
+        /* Ride Times section */
+
+        section#rideTimes {
+            padding: inherit;
+        }
+
+        #rideTimes header {
+            margin-bottom: -10px;
+        }
+
+        div#rideList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .landDetails {
+            margin-top: 10px;
+        }
+
+        .landTitle {
+            background-color: brown;
+            color: whitesmoke;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        .rideDetails {
+            border: 1px solid teal;
+            padding: 5px 10px;
+            margin: 0 0 10px;
+            width: 20em;
+        }
+
+        .rideDetails span {
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: whitesmoke;
+        }
+
+        .open {
+            background-color: #0c9717;
+            font-weight: bold;
+        }
+
+        .closed {
+            background-color: #970c0c;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        p.longWait::after {
+            content: " \2639";
+            color: red;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Beginner's Guide to Walt Disney World</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li id="nav-resorts">
+                <a href="#">Resorts</a>
+                <ul>
+                    <li><a href="#">Value Resorts</a></li>
+                    <li><a href="#">Moderate Resorts</a></li>
+                    <li><a href="#">Deluxe Resorts</a></li>
+                </ul>
+            </li>
+            <li id="nav-parks">
+                <a href="#">Parks</a>
+                <ul>
+                    <li><a href="#">Magic Kingdom</a></li>
+                    <li><a href="#">EPCOT</a></li>
+                    <li><a href="#">Hollywood Studios</a></li>
+                    <li><a href="#">Animal Kingdom</a></li>
+                </ul>
+            </li>
+            <li id="nav-dining">
+                <a href="#">Dining</a>
+                <ul>
+                    <li><a href="#">Quick Service</a></li>
+                    <li><a href="#">Table Service</a></li>
+                    <li><a href="#">Fine and Signature Dining</a></li>
+                    <li><a href="#">Character Dining</a></li>
+                </ul>
+            </li>
+            <li><a href="https://www.disneyholidays.co.uk/" target="_blank" class="externalLink">Disney Holidays</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="pageTitle">
+        <h1>EPCOT</h1>
+        <h2>"Where the Impossible Becomes Possible"</h2>
+    </header>
+
+    <main>
+        <section id="history">
+            <h2>The History of EPCOT</h2>
+            <p>This is the home section of our website.</p>
+        </section>
+
+        <section id="discover">
+            <h2>The Lands of EPCOT</h2>
+            <p>We are a small and friendly team dedicated to creating awesome websites.</p>
+        </section>
+
+        <section id="food">
+            <h2>The Food of EPCOT</h2>
+            <p>If you have any questions or inquiries, please feel free to contact us.</p>
+        </section>
+        
+    </main>
+    
+    <footer id="rides">
+        <section id="rideTimes">
+            <header><h2>Ride Times</h2></header>
+            <div id="rideList">  
+            </div>
+        </section>
+    </footer>
+
+    <footer id="footer">
+        <p>Links and copyright shit goes here</p>
+    </footer>
+
+        
+
+
+    <script>
+        window.onload = async () => {
+        let list = document.getElementById('rideList');
+        let container = document.getElementById('rideTimes');
+            
+        const data = {
+            "lands": [
+                {
+                "id": 897,
+                "name": "World Celebration",
+                "rides": [
+                    {
+                    "id": 2495,
+                    "name": "Disney and Pixar Short Film Festival",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 155,
+                    "name": "Journey Into Imagination With Figment",
+                    "is_open": true,
+                    "wait_time": 15,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 159,
+                    "name": "Spaceship Earth",
+                    "is_open": false,
+                    "wait_time": 5,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    }
+                ]
+                },
+                {
+                "id": 896,
+                "name": "World Discovery",
+                "rides": [
+                    {
+                    "id": 10916,
+                    "name": "Guardians of the Galaxy: Cosmic Rewind",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 158,
+                    "name": "Mission: SPACE",
+                    "is_open": false,
+                    "wait_time": 10,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 160,
+                    "name": "Test Track",
+                    "is_open": true,
+                    "wait_time": 40,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 10900,
+                    "name": "Test Track Presented by Chevrolet Single Rider",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    }
+                ]
+                },
+                {
+                "id": 898,
+                "name": "World Nature",
+                "rides": [
+                    {
+                    "id": 7323,
+                    "name": "Awesome Planet",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 156,
+                    "name": "Living with the Land",
+                    "is_open": true,
+                    "wait_time": 10,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 151,
+                    "name": "Soarin' Over California",
+                    "is_open": true,
+                    "wait_time": 15,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 153,
+                    "name": "The Seas with Nemo & Friends",
+                    "is_open": true,
+                    "wait_time": 20,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 152,
+                    "name": "Turtle Talk With Crush",
+                    "is_open": true,
+                    "wait_time": 15,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    }
+                ]
+                },
+                {
+                "id": 64,
+                "name": "World Showcase",
+                "rides": [
+                    {
+                    "id": 829,
+                    "name": "Canada Far and Wide in Circle-Vision 360",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 2679,
+                    "name": "Frozen Ever After",
+                    "is_open": true,
+                    "wait_time": 105,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 466,
+                    "name": "Gran Fiesta Tour Starring The Three Caballeros",
+                    "is_open": true,
+                    "wait_time": 15,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 6701,
+                    "name": "Meet Anna and Elsa at Royal Sommerhus",
+                    "is_open": false,
+                    "wait_time": 15,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 10914,
+                    "name": "Remy's Ratatouille Adventure",
+                    "is_open": true,
+                    "wait_time": 45,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    },
+                    {
+                    "id": 10915,
+                    "name": "Remy's Ratatouille Adventure Single Rider",
+                    "is_open": true,
+                    "wait_time": 0,
+                    "last_updated": "2023-10-02T20:00:22.000Z"
+                    }
+                ]
+                }
+            ],
+            "rides": []
+            }
+            
+        // For each of the entries in data.lands
+        for (let lands of data.lands) {
+                // Create a div element for each land
+                let landDiv = document.createElement('div');
+                landDiv.classList.add('landDetails');
+
+                // Create an h3 element for the land title
+                let landTitle = document.createElement('h3');
+                landTitle.classList.add('landTitle');
+                landTitle.textContent = lands.name;
+                landDiv.appendChild(landTitle);
+
+                // let waitTimeToggle = document.createElement('button');
+                // waitTimeToggle.classList.add('toggle');
+                // waitTimeToggle.textContent = ('Close');
+                // landTitle.appendChild(waitTimeToggle);
+
+                // Now for the rides part
+                // For each ride in each lands object
+                for (let r of lands.rides) {
+                    // Create a div element for each ride
+                    let rideDiv = document.createElement('div');
+                    rideDiv.classList.add('rideDetails');
+
+                    // Create p elements for ride title, ride time, and ride status
+                    let rideTitle = document.createElement('p');
+                    rideTitle.classList.add('rideTitle');
+                    rideTitle.textContent = r.name;
+
+                    let rideTime = document.createElement('p');
+                    let waitTime = r.wait_time;
+
+                    if (r.wait_time > 60) {
+                        rideTime.classList.add('longWait');
+                    } else {
+                        rideTime.classList.add('shortRide');
+                    }
+                    rideTime.textContent = `Wait Time: ${r.wait_time} minutes`;
+
+                    let isOpen = document.createElement('span');
+                    let status = r.is_open;
+
+                    if (r.is_open == true) {
+                        isOpen.classList.add('open');
+                    } else {
+                        isOpen.classList.add('closed');
+                    };
+
+                    isOpen.textContent = r.is_open ? "Open" : "Closed";
+
+                    // Append the ride details to the ride div
+                    rideDiv.appendChild(rideTitle);
+                    rideDiv.appendChild(rideTime);
+                    rideDiv.appendChild(isOpen);
+
+                    // Append the ride div to the land div
+                    landDiv.appendChild(rideDiv);
+                }
+
+                // Append the land div to the list
+                list.appendChild(landDiv);
+            }
+
+            
+            
+        };
+
+
+    </script>
+</body>
+</html>
